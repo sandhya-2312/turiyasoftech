@@ -29,7 +29,9 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-slate-950/95 shadow-xl shadow-black/30 backdrop-blur-md" : "bg-transparent"
+        isScrolled
+          ? "border-b border-cyan-300/20 bg-gradient-to-r from-slate-950/95 via-blue-950/90 to-slate-950/95 shadow-[0_10px_35px_rgba(2,6,23,0.55)] backdrop-blur-xl"
+          : "bg-transparent"
       }`}
     >
       <div className="relative mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -161,7 +163,13 @@ function Navbar() {
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[2px] bg-white/90" />
+      <div
+        className={`pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[2px] transition-all duration-300 ${
+          isScrolled
+            ? "bg-gradient-to-r from-transparent via-cyan-300/95 to-transparent opacity-100"
+            : "bg-white/90 opacity-90"
+        }`}
+      />
     </header>
   );
 }

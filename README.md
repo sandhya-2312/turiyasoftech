@@ -1,16 +1,15 @@
 # Turiya Softech Landing Page
 
-A modern responsive landing page built with React + Vite + Tailwind CSS.
+A modern, responsive landing page built with React, Vite, and Tailwind CSS.
 
 ## Features
 
-- Transparent fixed navbar over hero section
-- Navbar background + shadow on scroll
-- Desktop dropdown menus with hover transitions
-- Mobile hamburger menu with expandable dropdown items
-- Full-screen hero section with dark readable overlay
-- Smooth animated background image effect (cinematic zoom)
-- Reusable button style variants (`corporate` and `boldModern`)
+- Transparent fixed navbar with modern glass-gradient color on scroll
+- Desktop dropdown menus and mobile expandable navigation
+- Cinematic hero section with smooth background zoom animation
+- Dedicated content sections for About, Solutions, Industries, and Contact
+- Premium glass-style footer with logo, links, and contact details
+- Custom spiral favicon for browser tab branding
 
 ## Tech Stack
 
@@ -20,11 +19,17 @@ A modern responsive landing page built with React + Vite + Tailwind CSS.
 
 ## Project Structure
 
-- `src/components/Navbar.jsx` - responsive navbar with dropdowns and CTA
-- `src/components/Hero.jsx` - full-screen hero section and CTA
-- `src/styles/buttonVariants.js` - centralized button hover/style variants
-- `src/pages/HomePage.jsx` - page composition for navbar + hero
-- `src/index.css` - Tailwind imports and custom hero animation keyframes
+- `src/components/Navbar.jsx` - responsive navbar with desktop/mobile menus
+- `src/components/Hero.jsx` - hero section and primary CTA
+- `src/components/AboutSection.jsx` - about overview and highlights
+- `src/components/DesignSolutions.jsx` - tab-based solutions showcase
+- `src/components/IndustriesSection.jsx` - industries cards section
+- `src/components/ContactCardSection.jsx` - contact CTA and quick contact details
+- `src/components/Footer.jsx` - branded footer layout
+- `src/ui/buttonStyles.js` - shared CTA button styles
+- `src/pages/HomePage.jsx` - page composition
+- `src/index.css` - Tailwind imports and custom keyframes
+- `public/favicon.svg` - custom spiral favicon
 
 ## Getting Started
 
@@ -51,16 +56,3 @@ npm run build
 ```bash
 npm run preview
 ```
-
-## Design Notes
-
-- Navbar includes a thin white separator line at the bottom for premium contrast.
-- CTA buttons are rectangular and use shared style variants from `buttonVariants`.
-- Hero currently uses an animated background image (no video required).
-
-## Button Variant Switch
-
-To switch global button style, edit `src/styles/buttonVariants.js`:
-
-- `"corporate"` for subtle hover
-- `"boldModern"` for gradient glow hover
