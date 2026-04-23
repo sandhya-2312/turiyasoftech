@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.06) translate3d(0, -1.5%, 0);
+  }
+  100% {
+    transform: scale(1.1) translate3d(0, -3%, 0);
+  }
+}
+
+.hero-bg-zoom {
+  animation: heroZoom 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
