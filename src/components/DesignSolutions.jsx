@@ -129,7 +129,7 @@ function DesignSolutions() {
 
         <div
           key={activeSolution.id}
-          className="mt-7 grid h-[300px] gap-0 overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-900/10 transition-all duration-500 ease-out animate-in fade-in md:h-[440px] md:grid-cols-12"
+          className="mt-7 grid gap-0 overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-xl shadow-slate-900/10 transition-all duration-500 ease-out animate-in fade-in md:h-[440px] md:grid-cols-12"
         >
           <div className="relative z-10 bg-sky-100 p-5 sm:p-6 md:col-span-4 md:h-full md:p-7">
             <div className="absolute -top-12 -right-10 h-32 w-32 rounded-full bg-sky-200/80 blur-xl" />
@@ -144,14 +144,14 @@ function DesignSolutions() {
             </p>
             <button
               type="button"
-              className="mt-7 inline-flex items-center gap-2 rounded-full border border-slate-800/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-800 transition-all duration-300 hover:translate-x-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-slate-800/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-800 transition-all duration-300 hover:translate-x-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white sm:mt-7"
             >
               Explore Now
               <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
 
-          <div className="group relative h-[300px] md:col-span-8 md:h-full">
+          <div className="group relative h-52 sm:h-64 md:col-span-8 md:h-full">
             <img
               src={activeSolution.image}
               alt={activeSolution.imageAlt}
