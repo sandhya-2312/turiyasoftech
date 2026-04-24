@@ -18,3 +18,51 @@
   animation: heroZoom 18s ease-in-out infinite alternate;
   will-change: transform;
 }
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.industry-card-enter {
+  opacity: 0;
+  animation: fadeSlideUp 620ms ease-out forwards;
+}
+
+.industry-panel-enter {
+  opacity: 0;
+  animation: fadeSlideRight 700ms ease-out 180ms forwards;
+}
+
+.industry-list-item-enter {
+  opacity: 0;
+  animation: fadeSlideUp 520ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-zoom,
+  .industry-card-enter,
+  .industry-panel-enter,
+  .industry-list-item-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

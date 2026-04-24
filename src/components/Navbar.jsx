@@ -6,15 +6,35 @@ import { primaryButtonClass } from "../ui/buttonStyles";
 const navItems = [
   { label: "Home", type: "link", href: "/" },
   { label: "Company", type: "dropdown", items: ["About Us", "Blog", "Careers"] },
-  { label: "Solutions", type: "dropdown", items: ["ERP", "Enterprise Application Integrations", "Data Engineering & Bussiness Intelligence", "Agentic AI", "Internet of Things", "Digital Twins"] },
-  { label: "Industries", type: "link" },
-  { label: "Products", type: "link" },
+  {
+    label: "Solutions",
+    type: "dropdown",
+    href: "/solutions",
+    items: [
+      "ERP",
+      "Enterprise Application Integrations",
+      "Data Engineering & Bussiness Intelligence",
+      "Agentic AI",
+      "Internet of Things",
+      "Digital Twins",
+    ],
+  },
+  { label: "Industries", type: "link", href: "/industries" },
+  { label: "Products", type: "link", href: "/products" },
   { label: "Contact Us", type: "link", href: "/contact" },
 ];
 
 const linkTargets = {
   Home: "/",
+  Blog: "/blog",
+  Careers: "/careers",
   "Contact Us": "/contact",
+  ERP: "/solutions/erp",
+  "Enterprise Application Integrations": "/solutions/enterprise-application-integrations",
+  "Data Engineering & Bussiness Intelligence": "/solutions/data-engineering-business-intelligence",
+  "Agentic AI": "/solutions/agentic-ai",
+  "Internet of Things": "/solutions/internet-of-things",
+  "Digital Twins": "/solutions/digital-twins",
 };
 
 function Navbar() {
@@ -59,8 +79,14 @@ function Navbar() {
                   {item.label}
                 </Link>
               ) : (
-                <button className="flex items-center gap-1 border-b border-transparent pb-1 text-sm font-medium text-white/90 transition duration-300 hover:border-cyan-300/80 hover:text-white">
-                  {item.label}
+                <div className="flex items-center gap-1 border-b border-transparent pb-1 text-sm font-medium text-white/90 transition duration-300 hover:border-cyan-300/80 hover:text-white">
+                  {item.href ? (
+                    <Link to={item.href} className="transition duration-300 hover:text-white">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button className="transition duration-300 hover:text-white">{item.label}</button>
+                  )}
                   {item.type === "dropdown" && (
                     <svg
                       className="h-4 w-4 text-cyan-200/90 transition duration-300 group-hover:rotate-180 group-hover:text-cyan-100"
@@ -74,7 +100,7 @@ function Navbar() {
                       />
                     </svg>
                   )}
-                </button>
+                </div>
               )}
 
               {item.type === "dropdown" && (
@@ -83,7 +109,7 @@ function Navbar() {
                     {item.items.map((subItem) => (
                       <Link
                         key={subItem}
-                        to={subItem === "About Us" ? "/about" : "#"}
+                        to={subItem === "About Us" ? "/about" : linkTargets[subItem] ?? "#"}
                         className="group/item flex items-center justify-between rounded-xl px-3 py-2.5 text-sm text-slate-200 transition duration-200 hover:bg-gradient-to-r hover:from-blue-500/25 hover:to-cyan-400/15 hover:text-white"
                       >
                         {subItem}
@@ -152,13 +178,13 @@ function Navbar() {
                     {openMobileDropdown === item.label && (
                       <div className="space-y-1 px-3 pb-3">
                         {item.items.map((subItem) => (
-                          <a
+                          <Link
                             key={subItem}
-                            href="#"
+                            to={subItem === "About Us" ? "/about" : linkTargets[subItem] ?? "#"}
                             className="block rounded-lg border border-transparent px-3 py-2 text-sm text-slate-200 transition duration-200 hover:border-cyan-300/40 hover:bg-gradient-to-r hover:from-blue-500/25 hover:to-cyan-400/15 hover:text-white"
                           >
                             {subItem}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
