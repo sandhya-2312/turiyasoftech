@@ -1,8 +1,11 @@
 function ContactCardSection() {
   return (
-    <section className="bg-gradient-to-b from-cyan-50 to-white px-4 pb-20 pt-8 sm:px-6 lg:px-8">
+    <section
+      id="contact-us"
+      className="scroll-mt-28 bg-gradient-to-b from-cyan-50 to-white px-4 pb-20 pt-8 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto w-full max-w-7xl">
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white shadow-2xl shadow-blue-900/10">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-cyan-300/70 bg-white shadow-2xl shadow-cyan-900/20">
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-16 top-0 h-44 w-44 rounded-full bg-cyan-200/60 blur-3xl" />
             <div className="absolute -right-16 bottom-0 h-48 w-48 rounded-full bg-blue-200/50 blur-3xl" />

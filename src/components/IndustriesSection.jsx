@@ -85,7 +85,7 @@ function IndustriesSection() {
 
   return (
     <section className="bg-gradient-to-b from-slate-50 via-blue-50 to-cyan-50 px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan-700">Industry Segments We Serve</p>
         <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
           Solving Industry&apos;s Most Pressing Challenges
@@ -96,10 +96,24 @@ function IndustriesSection() {
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute -left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-100 bg-white/95 text-2xl text-slate-700 shadow-lg transition hover:-translate-y-1/2 hover:bg-cyan-50"
+            className="absolute -left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-100 bg-white/95 text-slate-700 shadow-lg transition hover:-translate-y-1/2 hover:bg-cyan-50"
             aria-label="Previous industries"
           >
-            &#8249;
+            <svg
+              className="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M15 6L9 12L15 18"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
           <div className="overflow-hidden rounded-2xl">
@@ -134,10 +148,24 @@ function IndustriesSection() {
           <button
             type="button"
             onClick={handleNext}
-            className="absolute -right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-100 bg-white/95 text-2xl text-slate-700 shadow-lg transition hover:-translate-y-1/2 hover:bg-cyan-50"
+            className="absolute -right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-100 bg-white/95 text-slate-700 shadow-lg transition hover:-translate-y-1/2 hover:bg-cyan-50"
             aria-label="Next industries"
           >
-            &#8250;
+            <svg
+              className="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 6L15 12L9 18"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         </div>
 
