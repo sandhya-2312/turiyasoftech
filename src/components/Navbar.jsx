@@ -105,7 +105,7 @@ function Navbar() {
 
               {item.type === "dropdown" && (
                 <div className="pointer-events-none absolute left-1/2 top-full z-20 w-56 -translate-x-1/2 pt-2 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
-                  <div className="translate-y-1 rounded-2xl border border-white/20 bg-slate-900/90 p-2.5 shadow-2xl shadow-black/45 backdrop-blur-xl transition-all duration-300 group-hover:translate-y-0">
+                  <div className="translate-y-1 rounded-2xl border border-cyan-200/25 bg-slate-950 p-2.5 shadow-2xl shadow-black/60 ring-1 ring-white/10 transition-all duration-300 group-hover:translate-y-0">
                     {item.items.map((subItem) => (
                       <Link
                         key={subItem}

@@ -79,52 +79,7 @@ function OurStory() {
           Our Story
         </h2>
 
-        <div className="relative mx-auto mt-12 max-w-5xl">
-          <button
-            type="button"
-            onClick={goToPrevious}
-            className="absolute left-0 top-1/2 z-10 inline-flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200 bg-white text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-300/10 hover:text-cyan-700"
-            aria-label="Previous timeline item"
-          >
-            <ArrowLeftIcon />
-          </button>
-          <button
-            type="button"
-            onClick={goToNext}
-            className="absolute right-0 top-1/2 z-10 inline-flex h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200 bg-white text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-300/10 hover:text-cyan-700"
-            aria-label="Next timeline item"
-          >
-            <ArrowRightIcon />
-          </button>
-
-          <div
-            key={activeItem.years}
-            className="grid items-center gap-6 rounded-3xl border border-cyan-200/60 bg-slate-50 p-5 shadow-xl shadow-slate-200/70 transition-all duration-500 ease-out md:grid-cols-2 md:p-6 lg:gap-8"
-          >
-            <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/40">
-              <img
-                src={activeItem.image}
-                alt={`Turiya milestone ${activeItem.years}`}
-                className="h-56 w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.03] md:h-[300px]"
-                loading="lazy"
-              />
-            </div>
-
-            <div className="max-w-md transition-opacity duration-500 ease-out">
-              <p className="text-3xl font-semibold text-cyan-300 sm:text-4xl">{activeItem.years}</p>
-              <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
-                {activeItem.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-300" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 overflow-x-auto pb-2">
+        <div className="mx-auto mt-10 max-w-5xl overflow-x-auto pb-2">
           <div className="min-w-[720px]">
             <div className="relative h-10">
               <div className="absolute left-0 right-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-slate-200" />
@@ -165,6 +120,51 @@ function OurStory() {
                   );
                 })}
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mx-auto mt-8 max-w-5xl">
+          <button
+            type="button"
+            onClick={goToPrevious}
+            className="absolute left-0 top-1/2 z-10 inline-flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200 bg-white text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-300/10 hover:text-cyan-700"
+            aria-label="Previous timeline item"
+          >
+            <ArrowLeftIcon />
+          </button>
+          <button
+            type="button"
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 z-10 inline-flex h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200 bg-white text-slate-700 transition hover:border-cyan-300 hover:bg-cyan-300/10 hover:text-cyan-700"
+            aria-label="Next timeline item"
+          >
+            <ArrowRightIcon />
+          </button>
+
+          <div
+            key={activeItem.years}
+            className="grid items-center gap-6 rounded-3xl border border-cyan-200/60 bg-slate-50 p-5 shadow-xl shadow-slate-200/70 transition-all duration-500 ease-out md:grid-cols-2 md:p-6 lg:gap-8"
+          >
+            <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/40">
+              <img
+                src={activeItem.image}
+                alt={`Turiya milestone ${activeItem.years}`}
+                className="h-56 w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.03] md:h-[300px]"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="max-w-md transition-opacity duration-500 ease-out">
+              <p className="text-3xl font-semibold text-cyan-300 sm:text-4xl">{activeItem.years}</p>
+              <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
+                {activeItem.points.map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-300" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

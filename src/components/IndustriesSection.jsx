@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 const industries = [
   {
@@ -129,7 +130,10 @@ function IndustriesSection() {
                   className="shrink-0 px-2"
                   style={{ width: `${100 / visibleCards}%` }}
                 >
-                  <div className="group overflow-hidden rounded-xl border border-blue-100/70 bg-[#1f80cc] shadow-md shadow-blue-900/10 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-900/15">
+                  <Link
+                    to="/industries"
+                    className="group block overflow-hidden rounded-xl border border-blue-100/70 bg-[#1f80cc] shadow-md shadow-blue-900/10 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-900/15"
+                  >
                     <img
                       src={industry.image}
                       alt={industry.title}
@@ -139,7 +143,7 @@ function IndustriesSection() {
                     <div className="bg-gradient-to-r from-lime-300 to-emerald-300 px-4 py-3">
                       <h3 className="text-2xl font-semibold text-slate-900">{industry.title}</h3>
                     </div>
-                  </div>
+                  </Link>
                 </article>
               ))}
             </div>

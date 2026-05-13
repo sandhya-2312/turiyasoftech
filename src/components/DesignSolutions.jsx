@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { solutionsData } from "../data/solutionsData";
 
 function DesignSolutions() {
@@ -74,13 +75,13 @@ function DesignSolutions() {
             <p className="mt-4 text-xl font-bold leading-tight text-slate-900 sm:text-2xl">
               {activeSolution.title}
             </p>
-            <button
-              type="button"
+            <Link
+              to={`/solutions/${activeSolution.id}`}
               className="mt-5 inline-flex items-center gap-2 rounded-full border border-slate-800/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-800 transition-all duration-300 hover:translate-x-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white sm:mt-7"
             >
               Explore Now
               <span aria-hidden="true">&rarr;</span>
-            </button>
+            </Link>
           </div>
 
           <div className="group relative h-52 sm:h-64 md:col-span-8 md:h-full">

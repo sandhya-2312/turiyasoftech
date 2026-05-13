@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactCardSection from "../components/ContactCardSection";
+import { Link } from "react-router-dom";
 import bidguru from "../assets/bidguru.png";
 import isapp from "../assets/isapp.png";
 import unibim from "../assets/unibim.png";
@@ -114,9 +115,12 @@ function Products() {
                         </li>
                       ))}
                     </ul>
-                    <button className={`${primaryButtonClass} mt-6 w-full px-4 py-2.5`}>
+                    <Link
+                      to="/contact"
+                      className={`${primaryButtonClass} mt-6 block w-full px-4 py-2.5 text-center`}
+                    >
                       Book Demo
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ContactCardSection() {
   return (
     <section
@@ -25,12 +27,12 @@ function ContactCardSection() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="mailto:info@turiyasofttech.com"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:-translate-y-0.5 hover:from-blue-500 hover:to-cyan-400"
                 >
                   Contact Us
-                </a>
+                </Link>
                 <a
                   href="tel:+919500005741"
                   className="inline-flex items-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-cyan-300 hover:text-cyan-700"
